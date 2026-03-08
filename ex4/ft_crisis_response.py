@@ -19,7 +19,8 @@ def main() -> None:
     except Exception:
         print("RESPONSE: Security protocols deny access")
         print("STATUS: Crisis handled, security maintained")
-        print("\nROUTINE ACCESS: Attempting access to 'standard_archive.txt'...")
+        print("\nROUTINE ACCESS:"
+              "Attempting access to 'standard_archive.txt'...")
     try:
         with open("standard_archive.txt", "w+") as file:
             file.read()
