@@ -15,23 +15,23 @@ def main() -> None:
     print("\nCRISIS ALERT: Attempting access to 'classified_vault.txt'...")
     try:
         with open("classified_vault.txt", "r") as file:
-            file.read()
-    except Exception:
+            file.write("45")
+    except PermissionError:
         print("RESPONSE: Security protocols deny access")
         print("STATUS: Crisis handled, security maintained")
-        print("\nROUTINE ACCESS:"
-              "Attempting access to 'standard_archive.txt'...")
+
+    print("\nROUTINE ACCESS: Attempting access to 'standard_archive.txt'...")
     try:
-        with open("standard_archive.txt", "w+") as file:
+        with open("standard_archive.txt", "r") as file:
             file.read()
+        print("SUCCESS: Archive recovered -"
+              "``Knowledge preserved for humanity''")
+        print("STATUS: Normal operations resumed")
+
+        print("\nAll crisis scenarios handled successfully. Archives secure.")
     except Exception:
         print("RESPONSE: Security protocols deny access")
         print("STATUS: Crisis handled, security maintained")
-        return None
-    print("ROUTINE ACCESS: Attempting access to 'standard_archive.txt'...")
-    print("SUCCESS: Archive recovered -"
-          "``Knowledge preserved for humanity''")
-    print("\nAll crisis scenarios handled successfully. Archives secure.")
 
 
 if __name__ == "__main__":
