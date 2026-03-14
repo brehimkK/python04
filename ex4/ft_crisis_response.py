@@ -19,6 +19,9 @@ def main() -> None:
     except PermissionError:
         print("RESPONSE: Security protocols deny access")
         print("STATUS: Crisis handled, security maintained")
+    except FileNotFoundError:
+        print("RESPONSE: Archive not found in storage matrix")
+        print("STATUS: Crisis handled, system stable")
 
     print("\nROUTINE ACCESS: Attempting access to 'standard_archive.txt'...")
     try:
